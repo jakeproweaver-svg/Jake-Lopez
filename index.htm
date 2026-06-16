@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jake Lopez | Portfolio</title>
+    <!-- Importing a bold, graffiti/display-style font and a clean sans-serif for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Graffiti Accent Text */
+        .graffiti-text {
+            font-family: 'Permanent Marker', cursive;
+            letter-spacing: 2px;
+        }
+
+        /* Header / Navigation */
+        header {
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #ffffff;
+            background: #000;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2rem;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 0px #ffffff;
+            color: #000;
+            background: #fff;
+            padding: 2px 10px;
+            transform: rotate(-2deg);
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-left: 20px;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 60px 40px;
+            position: relative;
+            background: radial-gradient(circle, #1a1a1a 10%, transparent 11%);
+            background-size: 20px 20px;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            text-transform: uppercase;
+            line-height: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            display: block;
+            background: #ffffff;
+            color: #000000;
+            padding: 0 15px;
+            width: fit-content;
+            transform: skewX(-10deg);
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            border-left: 5px solid #ffffff;
+            padding-left: 15px;
+            margin-top: 10px;
+        }
+
+        /* Main Content Section */
+        .container {
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Section Borders & Boxes */
+        .section-box {
+            border: 4px solid #ffffff;
+            padding: 40px;
+            position: relative;
+            background: #000;
+            box-shadow: 8px 8px 0px #ffffff;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border-bottom: 2px dashed #ffffff;
+            padding-bottom: 10px;
+        }
+
+        /* Highlights */
+        .highlight-list {
+            list-style: none;
+        }
+
+        .highlight-list li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .highlight-list li::before {
+            content: "✕";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        /* Contact Details */
+        .contact-link {
+            display: block;
+            color: #000000;
+            background: #ffffff;
+            text-decoration: none;
+            padding: 15px;
+            margin-top: 15px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background: #000000;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 4px solid #ffffff;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header { padding: 20px; }
+            .hero h1 { font-size: 3.5rem; }
+            .grid { grid-template-columns: 1fr; }
+            .container { padding: 40px 20px; }
+            .logo { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo graffiti-text">J.LOPEZ</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero / Intro Section -->
+    <section class="hero">
+        <h1 class="graffiti-text">JAKE <span>LOPEZ</span></h1>
+        <p class="subtitle">Virtual Assistant & Customer Service Specialist</p>
+    </section>
+
+    <!-- Main Content Grid -->
+    <main class="container">
+        <div class="grid">
+            
+            <!-- About Me Block -->
+            <section id="about" class="section-box">
+                <h2 class="section-title graffiti-text">Profile</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                    5 years of experience in customer service and virtual assistant work. Equipped with great knowledge of managing remote office operations effectively. 
+                </p>
+                <p>
+                    Highly flexible, quick to adapt, and always willing to learn different lines of business (NOBs) to deliver top-tier results.
+                </p>
+            </section>
+
+            <!-- Skills & Contact Block -->
+            <div>
+                <section class="section-box">
+                    <h2 class="section-title graffiti-text">Skills</h2>
+                    <ul class="highlight-list">
+                        <li>Comprehensive Virtual Assistant (VA) Skillset</li>
+                        <li>Remote Office & Operations Management</li>
+                        <li>Customer Service Operations</li>
+                        <li>Adaptability to Diverse Lines of Business (NOBs)</li>
+                    </ul>
+                </section>
+
+                <section id="contact" class="section-box" style="box-shadow: 8px 8px 0px #ffffff;">
+                    <h2 class="section-title graffiti-text">Connect</h2>
+                    <p style="text-transform: uppercase; font-weight: bold; margin-bottom: 10px;">
+                        Current Company: Proweaver Inc.
+                    </p>
+                    <a href="mailto:jake@proweaver.com" class="contact-link">jake@proweaver.com</a>
+                    <a href="tel:949-269-8216" class="contact-link">949-269-8216</a>
+                </section>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Jake Lopez // Representing Proweaver Inc.</p>
+    </footer>
+
+</body>
+</html>
